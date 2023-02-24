@@ -16,6 +16,7 @@ public class CCProducer {
 
         // Load producer configuration settings from a local file
         final Properties props = loadConfig(args[0]);
+        //adjust topic name
         final String topic = "clickstream";
 
         String[] users = {"eabara", "jsmith", "sgarcia", "jbernard", "htanaka", "awalther"};
