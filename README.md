@@ -10,7 +10,7 @@ security.protocol=SASL_SSL
 sasl.oauthbearer.token.endpoint.url=https://{your okta dev server}/oauth2/default/v1/token
 sasl.login.callback.handler.class=org.apache.kafka.common.security.oauthbearer.secured.OAuthBearerLoginCallbackHandler
 sasl.mechanism=OAUTHBEARER
-sasl.jaas.config=org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required clientId='{clientId}' clientSecret='{client secret}' extension_logicalCluster='{your cluster id}' extension_identityPoolId='{your id pool}';
+sasl.jaas.config=org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required clientId='{clientId}' clientSecret='{client secret}' scope='{scope}' extension_logicalCluster='{your cluster id}' extension_identityPoolId='{your id pool}';
 
 # Best practice for Kafka producer to prevent data loss (add those to the oauth.properties file)
 acks=all
